@@ -59,7 +59,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'
+        node-version: '22'
     - name: Install Dependencies
       run: npm install
     - name: Install Snyk
@@ -68,4 +68,3 @@ jobs:
       run: snyk test --all-projects --severity-threshold=low
       # Fail the build if vulnerabilities are found
       continue-on-error: false
-  
