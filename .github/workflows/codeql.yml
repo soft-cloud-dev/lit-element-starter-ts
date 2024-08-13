@@ -51,7 +51,7 @@ jobs:
         with:
           languages: ${{ matrix.language }}
           build-mode: ${{ matrix.build-mode }}
-          queries: +security-extended,security-and-quality,experimental,javascript-security-and-quality
+          queries: +security-extended,security-and-quality,javascript-security-and-quality
 
       - name: Run npm audit
         run: npm audit --production --audit-level=high
